@@ -3,8 +3,8 @@ guid: 5b325c656c8086548bb2c8c8849c1263
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -7819903660237691189
-    second: pngimg.com - bullets_PNG35491_0
+      213: 2208703988740019828
+    second: Bullet_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: pngimg.com - bullets_PNG35491_0
+      name: Bullet_0
       rect:
         serializedVersion: 2
-        x: 269
-        y: 40
-        width: 81
-        height: 517
+        x: 40
+        y: 250
+        width: 517
+        height: 81
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: bc661c97d0f1a7390800000000000000
-      internalID: -7819903660237691189
+      spriteID: 47656d65394e6ae10800000000000000
+      internalID: 2208703988740019828
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      pngimg.com - bullets_PNG35491_0: -7819903660237691189
+      Bullet_0: 2208703988740019828
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

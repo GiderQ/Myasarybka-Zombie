@@ -12,6 +12,7 @@ public class Bullet : MonoBehaviour
 
     void Update()
     {
+        // Moves along local X-axis
         transform.Translate(Vector3.right * speed * Time.deltaTime);
     }
 
