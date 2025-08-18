@@ -11,6 +11,12 @@ public class GunController : MonoBehaviour
 
     void RotateAroundPlayer()
     {
+        if (player == null)
+        {
+            Debug.LogError("Player reference is missing in GunController!");
+            return;
+        }
+
         Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         mousePos.z = 0f;
 
