@@ -4,7 +4,7 @@ public class PlayerController : MonoBehaviour
 {
     public float speed = 5f;
     public bool isAlive = true;
-    public GameObject bulletPrefab;
+    public GameObject bulletPrefab, game, deathScene;
     public Transform firePoint;
     public Vector3 gunOffset = new Vector3(0.5f, 0, 0);
 
@@ -18,6 +18,12 @@ public class PlayerController : MonoBehaviour
 
         if (firePoint != null)
             firePoint.parent.localPosition = gunOffset;
+
+        if (!isAlive)
+        {
+            game.SetActive(false);
+            deathScene.SetActive(true);
+        }
     }
 
     void Move()
@@ -48,5 +54,10 @@ public class PlayerController : MonoBehaviour
         Quaternion rotation = Quaternion.Euler(0, 0, angle);
 
         Instantiate(bulletPrefab, firePoint.position, rotation);
+    }
+
+    public void killYourself()
+    {
+        isAlive = false;
     }
 }
