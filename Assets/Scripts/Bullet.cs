@@ -5,6 +5,8 @@ public class Bullet : MonoBehaviour
     public float speed = 25f;
     public float lifeTime = 2f;
 
+    public SpriteRenderer color;
+
     void Start()
     {
         Destroy(gameObject, lifeTime);
@@ -19,8 +21,12 @@ public class Bullet : MonoBehaviour
     {
         if (other.CompareTag("Zombie"))
         {
-            Destroy(other.gameObject);
+            Zombie enemyStats = other.GetComponent<Zombie>();
+
+            enemyStats.hp--;
             Destroy(gameObject);
+
         }
     }
+
 }

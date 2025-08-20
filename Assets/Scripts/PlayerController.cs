@@ -4,12 +4,14 @@ public class PlayerController : MonoBehaviour
 {
     public float speed = 5f;
     public bool isAlive = true;
+    public float hpValue = 3;
+    public float fireRate = 0.2f;
+    private float nextFireTime = 0f;
+
     public GameObject bulletPrefab, game, deathScene;
     public Transform firePoint;
     public Vector3 gunOffset = new Vector3(0.5f, 0, 0);
 
-    public float fireRate = 0.2f;
-    private float nextFireTime = 0f;
 
     void Update()
     {
