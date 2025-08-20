@@ -1,6 +1,5 @@
 using System.Collections;
 using TMPro;
-using Unity.VisualScripting;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
@@ -12,9 +11,11 @@ public class PlayerController : MonoBehaviour
     private float nextFireTime = 0f;
     public bool cooldown = true;
     public GameObject bulletPrefab, game, deathScene;
-    public TextMeshProUGUI hp;
+    public TextMeshProUGUI hpText,scoreText;
     public Transform firePoint;
     public Vector3 gunOffset = new Vector3(0.5f, 0, 0);
+
+    public static int money, score; 
 
 
     void Update()
@@ -24,14 +25,15 @@ public class PlayerController : MonoBehaviour
 
         if (firePoint != null)
             firePoint.parent.localPosition = gunOffset;
-
+        
         if (hpValue <= 0)
         {
             game.SetActive(false);
             deathScene.SetActive(true);
         }
 
-        hp.text = ($"HP: {hpValue}");
+        hpText.text = ($"HP: {hpValue}");
+        scoreText.text = ($"Score: {score}");
     }
 
     void Move()
@@ -71,14 +73,19 @@ public class PlayerController : MonoBehaviour
     {   
         if (other.gameObject.CompareTag("Zombie") && cooldown)
         {
+            SpriteRenderer color = GetComponent<SpriteRenderer>();
             cooldown = false;
-            StartCoroutine(GetDamage());
+            StartCoroutine(GetDamage(color));
         }
     }
 
-    IEnumerator GetDamage()
+    IEnumerator GetDamage(SpriteRenderer color)
     {
         hpValue--;
+        color.color = Color.red;
+        yield return new WaitForSeconds(0.1f);
+        color.color = Color.white;
+
         yield return new WaitForSeconds(1);
         cooldown = true;
 
