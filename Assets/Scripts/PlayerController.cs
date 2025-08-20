@@ -16,7 +16,11 @@ public class PlayerController : MonoBehaviour
     public Transform firePoint;
     public Vector3 gunOffset = new Vector3(0.5f, 0, 0);
 
-
+    void Start()
+    {
+        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Confined;
+    }
     void Update()
     {
         Move();
@@ -53,18 +57,15 @@ public class PlayerController : MonoBehaviour
 
     void Shoot()
     {
-        Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        mousePos.z = 0f;
+      
+        Quaternion rotation = firePoint.rotation;
 
-        Vector2 direction = (mousePos - firePoint.position).normalized;
-
-        float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
-        Quaternion rotation = Quaternion.Euler(0, 0, angle);
-
+       
         Instantiate(bulletPrefab, firePoint.position, rotation);
     }
 
-    
+
+
 
 
     private void OnCollisionStay2D(Collision2D other)

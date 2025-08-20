@@ -688,6 +688,7 @@ GameObject:
   - component: {fileID: 517488567}
   - component: {fileID: 517488566}
   - component: {fileID: 517488570}
+  - component: {fileID: 517488571}
   m_Layer: 3
   m_Name: Player
   m_TagString: Player
@@ -753,7 +754,7 @@ CircleCollider2D:
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
-  m_Radius: 0.5
+  m_Radius: 8
 --- !u!212 &517488568
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -818,7 +819,7 @@ Transform:
   m_GameObject: {fileID: 517488565}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -630.39, y: -524.19, z: -5.9205785}
+  m_LocalPosition: {x: -630.3, y: -522.68, z: -5.9205785}
   m_LocalScale: {x: 0.06834297, y: 0.06834297, z: 0.06834297}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -851,6 +852,72 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!95 &517488571
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 517488565}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: -3123953535227903192, guid: c760e1d6faf24314fa17319f21f183c9, type: 3}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!1 &616495078
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 616495080}
+  - component: {fileID: 616495079}
+  m_Layer: 0
+  m_Name: CursorManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &616495079
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 616495078}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac7a4629d4decd144a99ab17a977189e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &616495080
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 616495078}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -1.9332321, y: 0.26996744, z: 0.108110614}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &664140733
 GameObject:
   m_ObjectHideFlags: 0
@@ -1811,7 +1878,7 @@ Transform:
   m_GameObject: {fileID: 2035706488}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 14.7, y: 3, z: 0}
+  m_LocalPosition: {x: 15.6, y: 15.5, z: 0}
   m_LocalScale: {x: 12.548014, y: 12.548014, z: 12.548014}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1877,7 +1944,7 @@ Transform:
   m_GameObject: {fileID: 2116103058}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -630.36, y: -524.48, z: -5.9205785}
+  m_LocalPosition: {x: -630.33, y: -524.53, z: -5.9205785}
   m_LocalScale: {x: 0.07969389, y: 0.07969389, z: 0.07969389}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1927,7 +1994,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 0
   m_Sprite: {fileID: 7557867524011257533, guid: d5cf00adfc08b4149aa8c0fa60fe90db, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -1952,6 +2019,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 517488569}
+  minRadius: 0.5
+  maxRadius: 0
+  spriteRotationOffset: -23
 --- !u!95 &2116103062
 Animator:
   serializedVersion: 7
@@ -1983,3 +2053,4 @@ SceneRoots:
   - {fileID: 1137488352}
   - {fileID: 435968688}
   - {fileID: 1448223320}
+  - {fileID: 616495080}
