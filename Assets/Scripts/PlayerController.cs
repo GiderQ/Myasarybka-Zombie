@@ -1,4 +1,6 @@
-using UnityEngine.UI;
+using System.Collections;
+using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
@@ -8,9 +10,9 @@ public class PlayerController : MonoBehaviour
     public float hpValue = 3;
     public float fireRate = 0.2f;
     private float nextFireTime = 0f;
-
+    public bool cooldown = true;
     public GameObject bulletPrefab, game, deathScene;
-    public 
+    public TextMeshProUGUI hp;
     public Transform firePoint;
     public Vector3 gunOffset = new Vector3(0.5f, 0, 0);
 
@@ -28,6 +30,8 @@ public class PlayerController : MonoBehaviour
             game.SetActive(false);
             deathScene.SetActive(true);
         }
+
+        hp.text = ($"HP: {hpValue}");
     }
 
     void Move()
@@ -63,11 +67,20 @@ public class PlayerController : MonoBehaviour
     
 
 
-    private void OnCollisionEnter2D(Collision2D other)
+    private void OnCollisionStay2D(Collision2D other)
     {   
-        if (other.gameObject.CompareTag("Zombie"))
+        if (other.gameObject.CompareTag("Zombie") && cooldown)
         {
-            hpValue--;
+            cooldown = false;
+            StartCoroutine(GetDamage());
         }
+    }
+
+    IEnumerator GetDamage()
+    {
+        hpValue--;
+        yield return new WaitForSeconds(1);
+        cooldown = true;
+
     }
 }
