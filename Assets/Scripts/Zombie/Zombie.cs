@@ -1,5 +1,4 @@
     using System.Collections;
-    using static UnityEngine.Color;
     using UnityEngine;
 public class Zombie : MonoBehaviour
 {
@@ -26,6 +25,8 @@ public class Zombie : MonoBehaviour
 
         if (hp <= 0)
         {
+            PlayerData.money++;
+            GetMoney();
             Destroy(gameObject);
         }
     }
@@ -46,4 +47,8 @@ public class Zombie : MonoBehaviour
 
     }
 
+    public void GetMoney()
+    {
+        PlayerController.score += 10;
+    }
 }

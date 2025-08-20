@@ -1,5 +1,5 @@
-using UnityEngine.UI;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class MenuUpgrade : MonoBehaviour
 {
@@ -7,15 +7,10 @@ public class MenuUpgrade : MonoBehaviour
 
     public void Upgrade()
     {
-        if (PlayerData.money > 10)
+        if (PlayerData.money >= 10)
         {
             PlayerData.money -= 10;
             slider.value++;
         }
-    }
-
-    void ViewMoney()
-    {
-
     }
 }

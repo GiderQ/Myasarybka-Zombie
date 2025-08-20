@@ -356,7 +356,7 @@ RectTransform:
   m_Father: {fileID: 1244478898}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: -7.1426697, y: 0}
   m_SizeDelta: {x: 0.2738, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -1666,6 +1666,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 197316251}
+  - component: {fileID: 197316252}
   m_Layer: 0
   m_Name: HPUpgrade
   m_TagString: Untagged
@@ -1690,6 +1691,19 @@ Transform:
   - {fileID: 637685546}
   m_Father: {fileID: 2044845383}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &197316252
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 197316250}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1195aa07693173418f95b129364f649, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  slider: {fileID: 637685547}
 --- !u!1 &200097918
 GameObject:
   m_ObjectHideFlags: 0
@@ -2009,7 +2023,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 1
+  m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &310225321
@@ -2235,7 +2249,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 1
+  m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &370072175
@@ -2733,7 +2747,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 492252715}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1928014572}
+        m_TargetAssemblyTypeName: MenuUpgrade, Assembly-CSharp
+        m_MethodName: Upgrade
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &492252715
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3787,7 +3813,7 @@ RectTransform:
   m_Father: {fileID: 653832117}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: -7.1426697, y: 0}
   m_SizeDelta: {x: 0.2738, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -4637,7 +4663,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 1
+  m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &735570048
@@ -4657,6 +4683,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 737228368}
+  - component: {fileID: 737228369}
   m_Layer: 0
   m_Name: DmgUpgrade
   m_TagString: Untagged
@@ -4681,6 +4708,19 @@ Transform:
   - {fileID: 336347921}
   m_Father: {fileID: 2044845383}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &737228369
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 737228367}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1195aa07693173418f95b129364f649, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  slider: {fileID: 336347922}
 --- !u!1 &744643410
 GameObject:
   m_ObjectHideFlags: 0
@@ -7662,7 +7702,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1324168460}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 737228369}
+        m_TargetAssemblyTypeName: MenuUpgrade, Assembly-CSharp
+        m_MethodName: Upgrade
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1324168460
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8736,7 +8788,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 1
+  m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &1517136044
@@ -8756,13 +8808,14 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1528432409}
+  - component: {fileID: 1528432410}
   m_Layer: 0
   m_Name: UpgradeMenu
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1528432409
 Transform:
   m_ObjectHideFlags: 0
@@ -8783,6 +8836,19 @@ Transform:
   - {fileID: 663621609}
   m_Father: {fileID: 1280382389}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1528432410
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1528432408}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f16f3c16d38f49242bbcdcdb161c0525, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  money: {fileID: 602555904}
 --- !u!1 &1532695433
 GameObject:
   m_ObjectHideFlags: 0
@@ -9027,7 +9093,7 @@ RectTransform:
   m_Father: {fileID: 707368198}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: -7.1426697, y: 0}
   m_SizeDelta: {x: 0.2738, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -9249,7 +9315,7 @@ RectTransform:
   m_Father: {fileID: 804557275}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: -7.1426697, y: 0}
   m_SizeDelta: {x: 0.2738, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -9973,6 +10039,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1847505770}
+  - component: {fileID: 1847505771}
   m_Layer: 0
   m_Name: SpeedAtackUpgrade
   m_TagString: Untagged
@@ -9997,6 +10064,19 @@ Transform:
   - {fileID: 407366783}
   m_Father: {fileID: 2044845383}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1847505771
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1847505769}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1195aa07693173418f95b129364f649, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  slider: {fileID: 407366784}
 --- !u!1 &1850126643
 GameObject:
   m_ObjectHideFlags: 0
@@ -10355,7 +10435,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1897607509}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1847505771}
+        m_TargetAssemblyTypeName: MenuUpgrade, Assembly-CSharp
+        m_MethodName: Upgrade
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1897607509
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10539,6 +10631,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1928014571}
+  - component: {fileID: 1928014572}
   m_Layer: 0
   m_Name: SpeedUpgrade
   m_TagString: Untagged
@@ -10563,6 +10656,19 @@ Transform:
   - {fileID: 1516685623}
   m_Father: {fileID: 2044845383}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1928014572
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1928014570}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1195aa07693173418f95b129364f649, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  slider: {fileID: 1516685624}
 --- !u!1 &1949530664
 GameObject:
   m_ObjectHideFlags: 0
@@ -10724,7 +10830,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2006486403
 Transform:
   m_ObjectHideFlags: 0
@@ -11164,7 +11270,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 1
+  m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &2112506455
@@ -11332,7 +11438,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2129652645}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 197316252}
+        m_TargetAssemblyTypeName: MenuUpgrade, Assembly-CSharp
+        m_MethodName: Upgrade
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2129652645
 MonoBehaviour:
   m_ObjectHideFlags: 0
