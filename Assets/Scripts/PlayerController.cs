@@ -1,3 +1,4 @@
+using UnityEngine.UI;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
@@ -9,6 +10,7 @@ public class PlayerController : MonoBehaviour
     private float nextFireTime = 0f;
 
     public GameObject bulletPrefab, game, deathScene;
+    public 
     public Transform firePoint;
     public Vector3 gunOffset = new Vector3(0.5f, 0, 0);
 
@@ -21,7 +23,7 @@ public class PlayerController : MonoBehaviour
         if (firePoint != null)
             firePoint.parent.localPosition = gunOffset;
 
-        if (!isAlive)
+        if (hpValue <= 0)
         {
             game.SetActive(false);
             deathScene.SetActive(true);
@@ -58,8 +60,14 @@ public class PlayerController : MonoBehaviour
         Instantiate(bulletPrefab, firePoint.position, rotation);
     }
 
-    public void killYourself()
-    {
-        isAlive = false;
+    
+
+
+    private void OnCollisionEnter2D(Collision2D other)
+    {   
+        if (other.gameObject.CompareTag("Zombie"))
+        {
+            hpValue--;
+        }
     }
 }
