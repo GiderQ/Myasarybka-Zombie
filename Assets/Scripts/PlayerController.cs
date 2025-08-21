@@ -4,9 +4,10 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    public float speed = 5f;
+    public float speed = 4;
+    public float hpValue = PlayerData.upgradeHp;
+
     public bool isAlive = true;
-    public float hpValue = 3;
     public float fireRate = 0.2f;
     private float nextFireTime = 0f;
     public bool cooldown = true;
@@ -30,7 +31,7 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         Move();
-        HandleShooting();
+        HandleShooting();    
 
         if (firePoint != null)
             firePoint.parent.localPosition = gunOffset;
@@ -64,16 +65,9 @@ public class PlayerController : MonoBehaviour
 
     void Shoot()
     {
-      
         Quaternion rotation = firePoint.rotation;
-
-       
         Instantiate(bulletPrefab, firePoint.position, rotation);
     }
-
-
-
-
 
     private void OnCollisionStay2D(Collision2D other)
     {   
@@ -87,7 +81,7 @@ public class PlayerController : MonoBehaviour
 
     IEnumerator GetDamage(SpriteRenderer color)
     {
-        hpValue--;
+        hpValue -= 3;
         color.color = Color.red;
         yield return new WaitForSeconds(0.1f);
         color.color = Color.white;

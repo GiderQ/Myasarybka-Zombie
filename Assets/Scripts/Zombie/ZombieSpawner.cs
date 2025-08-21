@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class ZombieSpawner : MonoBehaviour
 {
-    public GameObject zombiePrefab;
+    public GameObject zombiePrefab,skeletonPrefab;
     public Transform player;
     public float spawnRate = 2f;  
     public float spawnDistance = 10f; 
@@ -24,6 +24,14 @@ public class ZombieSpawner : MonoBehaviour
 
         Vector2 spawnDir = Random.insideUnitCircle.normalized;
         Vector3 spawnPos = player.position + (Vector3)(spawnDir * spawnDistance);
-        Instantiate(zombiePrefab, spawnPos, Quaternion.identity);
+        if (Random.Range(1,3) == 3)
+        {
+            Instantiate(skeletonPrefab, spawnPos, Quaternion.identity);
+        }
+        else
+        {
+            Instantiate(zombiePrefab, spawnPos, Quaternion.identity);
+        }
+
     }
 }

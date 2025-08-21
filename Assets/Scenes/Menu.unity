@@ -2750,7 +2750,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1928014572}
         m_TargetAssemblyTypeName: MenuUpgrade, Assembly-CSharp
-        m_MethodName: Upgrade
+        m_MethodName: UpgradeSpeed
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2933,7 +2933,7 @@ MonoBehaviour:
   m_text: Language
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: bc5124073b0700648bb4e88eab9db9a9, type: 2}
-  m_sharedMaterial: {fileID: 3713592820872531135, guid: 2db906d9605a65b45a7e0ae90300ae3e, type: 2}
+  m_sharedMaterial: {fileID: -5764812041950156, guid: bc5124073b0700648bb4e88eab9db9a9, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -7153,7 +7153,7 @@ MonoBehaviour:
   m_text: Master
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: bc5124073b0700648bb4e88eab9db9a9, type: 2}
-  m_sharedMaterial: {fileID: 3713592820872531135, guid: 2db906d9605a65b45a7e0ae90300ae3e, type: 2}
+  m_sharedMaterial: {fileID: -5764812041950156, guid: bc5124073b0700648bb4e88eab9db9a9, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -7500,7 +7500,7 @@ MonoBehaviour:
   m_text: Music
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: bc5124073b0700648bb4e88eab9db9a9, type: 2}
-  m_sharedMaterial: {fileID: 3713592820872531135, guid: 2db906d9605a65b45a7e0ae90300ae3e, type: 2}
+  m_sharedMaterial: {fileID: -5764812041950156, guid: bc5124073b0700648bb4e88eab9db9a9, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -7705,7 +7705,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 737228369}
         m_TargetAssemblyTypeName: MenuUpgrade, Assembly-CSharp
-        m_MethodName: Upgrade
+        m_MethodName: UpgradeAtk
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -9819,7 +9819,7 @@ MonoBehaviour:
   m_text: SFX
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: bc5124073b0700648bb4e88eab9db9a9, type: 2}
-  m_sharedMaterial: {fileID: 3713592820872531135, guid: 2db906d9605a65b45a7e0ae90300ae3e, type: 2}
+  m_sharedMaterial: {fileID: -5764812041950156, guid: bc5124073b0700648bb4e88eab9db9a9, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -10438,7 +10438,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1847505771}
         m_TargetAssemblyTypeName: MenuUpgrade, Assembly-CSharp
-        m_MethodName: Upgrade
+        m_MethodName: UpgradeAtkSpeed
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -11069,7 +11069,7 @@ MonoBehaviour:
   m_text: back
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: bc5124073b0700648bb4e88eab9db9a9, type: 2}
-  m_sharedMaterial: {fileID: 3713592820872531135, guid: 2db906d9605a65b45a7e0ae90300ae3e, type: 2}
+  m_sharedMaterial: {fileID: -5764812041950156, guid: bc5124073b0700648bb4e88eab9db9a9, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -11441,7 +11441,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 197316252}
         m_TargetAssemblyTypeName: MenuUpgrade, Assembly-CSharp
-        m_MethodName: Upgrade
+        m_MethodName: UpgradeHp
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

@@ -3,13 +3,12 @@
 public class Zombie : MonoBehaviour
 {
     public bool alive = true;
-    public float speed = 3;
+    public float speed;
     public float hp = 3;
         
     private Transform player;
     void Start()
     {
-
         player = GameObject.FindGameObjectWithTag("Player").transform;
     }
 

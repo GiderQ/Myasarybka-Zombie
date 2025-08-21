@@ -23,7 +23,7 @@ public class Bullet : MonoBehaviour
         {
             Zombie enemyStats = other.GetComponent<Zombie>();
 
-            enemyStats.hp--;
+            enemyStats.hp -= 3;
             Destroy(gameObject);
 
         }
