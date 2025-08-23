@@ -934,10 +934,6 @@ MonoBehaviour:
   firePoint: {fileID: 2035706489}
   gunOffset: {x: 0.5, y: 0, z: 0}
   sfxShoot: {fileID: 1684865515}
-  minX: -638.93
-  maxX: -621.87
-  minY: -527.32
-  maxY: -518
 --- !u!58 &517488567
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -1038,11 +1034,11 @@ Transform:
   m_GameObject: {fileID: 517488565}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -630.71, y: -523.16, z: -5.9205785}
+  m_LocalPosition: {x: -0.27819824, y: -0.48638916, z: 0}
   m_LocalScale: {x: 0.04356864, y: 0.04356864, z: 0.04356864}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1137488352}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!50 &517488570
 Rigidbody2D:
@@ -2605,7 +2601,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 517488569}
   - {fileID: 2116103059}
   - {fileID: 1542072846}
   - {fileID: 480531171}
@@ -5483,6 +5478,7 @@ SceneRoots:
   m_Roots:
   - {fileID: 380654669}
   - {fileID: 2093513614}
+  - {fileID: 517488569}
   - {fileID: 1137488352}
   - {fileID: 435968688}
   - {fileID: 1448223320}

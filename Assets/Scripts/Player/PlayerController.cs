@@ -30,10 +30,10 @@ public class PlayerController : MonoBehaviour
 
     void Start()
     {
-        mainSpeed = defaultSpeed + defaultSpeed * 0.05f * PlayerData.upgradeSpeed;
+        mainSpeed = defaultSpeed + (defaultSpeed * (0.05f * PlayerData.upgradeSpeed));
         mainHp = defaultHp + PlayerData.upgradeHp;
-        mainAtack = defaultAtack + defaultAtack * 0.05f * PlayerData.upgradeAtk;
-        mainSpeedAtack = defaultSpeedAtack + defaultSpeedAtack * 0.035f * PlayerData.upgradeAtkSpeed;
+        mainAtack = defaultAtack + (defaultAtack * (0.05f * PlayerData.upgradeAtk));
+        mainSpeedAtack = defaultSpeedAtack + (defaultSpeedAtack * (0.035f * PlayerData.upgradeAtkSpeed));
 
         rb = GetComponent<Rigidbody2D>();
         Cursor.visible = false;
@@ -52,7 +52,7 @@ public class PlayerController : MonoBehaviour
             deathScene.SetActive(true);
         }
 
-        hpText.text = ($"HP: {defaultHp}");
+        hpText.text = ($"HP: {mainHp}");
         scoreText.text = ($"Score: {score}");
     }
 
@@ -60,6 +60,26 @@ public class PlayerController : MonoBehaviour
     {
         float moveX = Input.GetAxis("Horizontal");
         float moveY = Input.GetAxis("Vertical");
+
+        if (transform.position.x < -8.49f)
+        {
+            transform.position = new Vector2(-8.49f, transform.position.y);
+        }
+        else if (transform.position.x > 8.54f)
+        {
+            transform.position = new Vector2(8.54f, transform.position.y);
+        }
+
+        if (transform.position.y < -4.67f)
+        {
+            transform.position = new Vector2(transform.position.x, -4.67f);
+        }
+        else if (transform.position.y > 4.67f)
+        {
+            transform.position = new Vector2(transform.position.x, 4.67f);
+        }
+
+
         Vector2 movement = new Vector2(moveX, moveY);
 
         rb.MovePosition(rb.position + movement * mainSpeed * Time.fixedDeltaTime);
@@ -92,7 +112,7 @@ public class PlayerController : MonoBehaviour
 
     IEnumerator GetDamage(SpriteRenderer color)
     {
-        defaultHp -= 3;
+        mainHp -= 3;
         color.color = Color.red;
         yield return new WaitForSeconds(0.1f);
         color.color = Color.white;
