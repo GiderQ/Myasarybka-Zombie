@@ -8,19 +8,19 @@ public class PlayerController : MonoBehaviour
         defaultHp = 9,
         defaultAtack = 3;
     float defaultSpeedAtack = 0.3f;
+    public static int money, score;
 
     public GameObject bulletPrefab, game, deathScene;
     public TextMeshProUGUI hpText,scoreText;
     public Transform firePoint;
     public Vector3 gunOffset = new Vector3(0.5f, 0, 0);
 
-    public static int money, score;
-
     bool cooldown = true;
 
     private float nextFireTime = 0f;
     private Rigidbody2D rb;
 
+    public AudioSource sfxShoot;
 
     void Start()
     {
@@ -58,6 +58,8 @@ public class PlayerController : MonoBehaviour
     {
         if (Input.GetButton("Fire1") && Time.time >= nextFireTime)
         {
+            sfxShoot.Play();
+
             Quaternion rotation = firePoint.rotation;
             Instantiate(bulletPrefab, firePoint.position, rotation);
             nextFireTime = Time.time + defaultSpeedAtack;

@@ -5,7 +5,8 @@ public class Zombie : MonoBehaviour
     public bool alive = true;
     public float speed;
     public float hp = 3;
-        
+
+    public AudioSource deadSound;
     private Transform player;
     void Start()
     {
@@ -24,6 +25,8 @@ public class Zombie : MonoBehaviour
 
         if (hp <= 0)
         {
+            deadSound.Play();
+
             PlayerData.money++;
             GetMoney();
             Destroy(gameObject);
