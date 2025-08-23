@@ -4,10 +4,16 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    int defaultSpeed = 4,
-        defaultHp = 9,
-        defaultAtack = 3;
-    float defaultSpeedAtack = 0.3f;
+    float defaultSpeed = 4,
+          defaultHp = 9,
+          defaultAtack = 3,
+          defaultSpeedAtack = 0.3f;
+
+    public static float mainSpeed,
+          mainHp,
+          mainAtack,
+          mainSpeedAtack;
+
     public static int money, score;
 
     public GameObject bulletPrefab, game, deathScene;
@@ -24,6 +30,11 @@ public class PlayerController : MonoBehaviour
 
     void Start()
     {
+        mainSpeed = defaultSpeed + defaultSpeed * 0.05f * PlayerData.upgradeSpeed;
+        mainHp = defaultHp + PlayerData.upgradeHp;
+        mainAtack = defaultAtack + defaultAtack * 0.05f * PlayerData.upgradeAtk;
+        mainSpeedAtack = defaultSpeedAtack + defaultSpeedAtack * 0.035f * PlayerData.upgradeAtkSpeed;
+
         rb = GetComponent<Rigidbody2D>();
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Confined;
@@ -35,7 +46,7 @@ public class PlayerController : MonoBehaviour
         if (firePoint != null)
             firePoint.parent.localPosition = gunOffset;
         
-        if (defaultHp <= 0)
+        if (mainHp <= 0)
         {
             game.SetActive(false);
             deathScene.SetActive(true);
@@ -51,7 +62,8 @@ public class PlayerController : MonoBehaviour
         float moveY = Input.GetAxis("Vertical");
         Vector2 movement = new Vector2(moveX, moveY);
 
-        rb.MovePosition(rb.position + movement * defaultSpeed * Time.fixedDeltaTime);
+        rb.MovePosition(rb.position + movement * mainSpeed * Time.fixedDeltaTime);
+
     }
 
     void HandleShooting()
