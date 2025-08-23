@@ -24,7 +24,7 @@ public class ZombieSpawner : MonoBehaviour
 
         Vector2 spawnDir = Random.insideUnitCircle.normalized;
         Vector3 spawnPos = player.position + (Vector3)(spawnDir * spawnDistance);
-        if (Random.Range(1,3) == 3)
+        if (Random.Range(1,4) == 3)
         {
             Instantiate(skeletonPrefab, spawnPos, Quaternion.identity);
         }
