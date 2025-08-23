@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SocialPlatforms.Impl;
 
 public class PlayerController : MonoBehaviour
 {
@@ -30,6 +31,7 @@ public class PlayerController : MonoBehaviour
 
     void Start()
     {
+        score = 0;
         mainSpeed = defaultSpeed + (defaultSpeed * (0.05f * PlayerData.upgradeSpeed));
         mainHp = defaultHp + PlayerData.upgradeHp;
         mainAtack = defaultAtack + (defaultAtack * (0.05f * PlayerData.upgradeAtk));
